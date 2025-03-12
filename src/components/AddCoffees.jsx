@@ -2,6 +2,7 @@ import React from 'react';
 // import bg from '../assets/more/11.png'
 import { Link } from 'react-router';
 import { FaArrowLeft } from "react-icons/fa";
+import Swal from 'sweetalert2'
 
 const AddCoffees = () => {
 
@@ -34,6 +35,14 @@ const AddCoffees = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Add New Coffee Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
             })
     }
 
