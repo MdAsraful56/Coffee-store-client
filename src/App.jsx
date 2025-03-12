@@ -4,6 +4,7 @@ import HomeLayout from './layout/HomeLayout'
 import Main from './components/Main'
 import AddCoffees from './components/AddCoffees'
 import UpdateCoffee from './components/UpdateCoffee'
+import Error from './components/Error'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     createRoutesFromElements(
       <Route path='/' element={ <Main/> } >
         <Route index element={ <HomeLayout/> } />
+        <Route path='*' element={ <Error/> } />
         <Route path='addcoffee' element={ <AddCoffees/> } />
         <Route path='updatecoffee' element={ <UpdateCoffee/> } />
       </Route>

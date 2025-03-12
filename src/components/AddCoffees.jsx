@@ -71,6 +71,3 @@ const AddCoffees = () => {
 };
 
 export default AddCoffees;
-
-// CoffeeManager
-// 0yrpwuexC5Uzsgf4
