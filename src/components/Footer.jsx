@@ -13,8 +13,8 @@ const Footer = () => {
     return (
         <div className='relative w-full'>
             <img src={footerImg} alt="" className="w-full h-[450px] object-cover " />
-            <div className="absolute inset-0 px-10 flex flex-row  items-center justify-between">
-                <div className="w-1/2 space-y-4">
+            <div className="absolute inset-0 px-10 flex gap-10 lg:flex-row flex-col items-center justify-between">
+                <div className="lg:w-1/2 w-full space-y-4">
                     <img src={capIcon} alt="" className="h-32 w-28" />
                     <h3 className="text-3xl text-[#331A15] rancho-font font-semibold ">Espresso Emporium</h3>
                     <p className="raleway-font text-lg">Always ready to be your friend. Come & Contact with us to share your memorable moments, to share with your best companion.</p>
@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* contact info */}
-                <div className="w-1/2 ml-20">
+                <div className="lg:w-1/2 w-full lg:ml-20 ml-2">
                     <h2 className="text-4xl text-[#331A15] rancho-font font-semibold mb-5">Connect with Us</h2>
                     <form className='space-y-3'>
                         <input type="text" name='name' className='input input-accent' placeholder='Name' /> 
