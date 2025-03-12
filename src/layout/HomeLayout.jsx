@@ -13,6 +13,9 @@ import img08 from '../assets/cups/Rectangle 9.png';
 
 
 const HomeLayout = () => {
+
+    
+
     return (
         <div className='mb-10'>
             {/* header section  */}
