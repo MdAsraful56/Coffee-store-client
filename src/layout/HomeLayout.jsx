@@ -21,7 +21,7 @@ const HomeLayout = () => {
                 <img src={headerIcon} alt="" className="w-full md:h-[550px] h-80 object-fill" />
                 <div className="absolute inset-0 lg:top-1/3 md:top-1/4 top-7 left-1/2 md:space-y-3 space-y-1 lg:mr-10 md:mr-4 mr-0 pr-5 text-white">
                     <h3 className="md:text-4xl text-2xl rancho-font font-medium ">Would you like a Cup of Delicious Coffee?</h3>
-                    <p className="text-sm font-medium">It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
+                    <p className="text-sm raleway-font font-medium">It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
                     <button className="btn bg-[#E3B577] text-black rancho-font text-lg hover:border-2 hover:bg-transparent hover:text-white hover:border-white ">Learn More</button>
                 </div>
             </div>
