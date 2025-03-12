@@ -1,7 +1,7 @@
 import React from 'react';
 import capIcon from '../assets/more/logo1.png'
-import footerImg from '../assets/more/9.png'
-import copyRigntImg from '../assets/more/24.jpg'
+// import footerImg from '../assets/more/9.png'
+// import copyRigntImg from '../assets/more/24.jpg'
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -13,9 +13,9 @@ import { FaLocationDot } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className="">
-            <div className='relative w-full'>
-                <img src={footerImg} alt="" className="w-full h-[450px] object-cover " />
-                <div className="absolute inset-0 px-10 flex gap-10 md:flex-row flex-col items-center justify-between">
+            <div className='w-full h-[450px] '>
+                {/* <img src={footerImg} alt="" className="w-full h-[450px] object-cover " /> */}
+                <div className="px-10 flex gap-10 md:flex-row flex-col items-center justify-between">
                     {/* details info */}
                     <div className="md:w-1/2 w-full space-y-4">
                         <img src={capIcon} alt="" className="h-32 w-28" />
@@ -52,11 +52,12 @@ const Footer = () => {
                         <button className="btn mt-3 text-lg rancho-font text-[#331A15] rounded-2xl border-2 border-[#331A15] ">Send Message</button>
                     </div>
                 </div>
+                <h2 className="lg:text-3xl md:text-2xl text-lg text-center text-black rancho-font pt-5 px-5">Copyright Espresso Emporium ! All Rights Reserved</h2>
             </div>
-            <div className="h-16 w-full text-center relative pt-10 md:block hidden">
+            {/* <div className="h-16 w-full text-center relative pt-10 md:block hidden">
                 <img src={copyRigntImg} alt="" className="h-16 w-full object-cover" />
                 <h2 className="text-3xl text-center absolute inset-0 top-1/2 rancho-font pt-5 text-white">Copyright Espresso Emporium ! All Rights Reserved</h2>
-            </div>
+            </div> */}
         </div>
     );
 };
