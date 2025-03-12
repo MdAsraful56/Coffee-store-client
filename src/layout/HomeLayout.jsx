@@ -1,6 +1,4 @@
 import React from 'react';
-import nameIcon from '../assets/more/15.jpg'
-import capIcon from '../assets/more/logo1.png'
 import headerIcon from '../assets/more/3.png'
 import { FiCoffee } from "react-icons/fi";
 import { Link } from 'react-router';
@@ -8,14 +6,6 @@ import { Link } from 'react-router';
 const HomeLayout = () => {
     return (
         <div className='mb-10'>
-            {/* title card section  */}
-            <div className="relative w-full" >
-                <img src={nameIcon} alt="" className='h-16 w-full object-cover' />
-                <div className="absolute inset-0 flex flex-row items-center justify-center">
-                    <img src={capIcon} alt="" className="w-20 h-20 mb-2 mt-2" />
-                    <h1 className="text-3xl font-semibold rancho-font text-white">Espresso Emporium</h1>
-                </div>
-            </div>
             {/* header section  */}
             <div className="relative w-full">
                 <img src={headerIcon} alt="" className="w-full md:h-[550px] h-80 object-fill" />
