@@ -2,6 +2,15 @@ import React from 'react';
 import headerIcon from '../assets/more/3.png'
 import { FiCoffee } from "react-icons/fi";
 import { Link } from 'react-router';
+import img01 from '../assets/cups/Rectangle 10.png';
+import img02 from '../assets/cups/Rectangle 11.png';
+import img03 from '../assets/cups/Rectangle 12.png';
+import img04 from '../assets/cups/Rectangle 13.png';
+import img05 from '../assets/cups/Rectangle 14.png';
+import img06 from '../assets/cups/Rectangle 15.png';
+import img07 from '../assets/cups/Rectangle 16.png';
+import img08 from '../assets/cups/Rectangle 9.png';
+
 
 const HomeLayout = () => {
     return (
@@ -19,13 +28,38 @@ const HomeLayout = () => {
             <div className="bg-[#ECEAE3] w-full h-72">
 
             </div>
-            {/* something design  */}
-            <div className="text-center mt-5 rancho-font space-y-4">
-                <p className="">--- Sip & Savor ---</p>
-                <h2 className="text-4xl text-[#331A15] font-semibold">Our Popular Products</h2>
-                <Link to='/addcoffee'>
-                    <button className="btn  bg-[#E3B577] text-black rancho-font hover:border-2 hover:bg-transparent hover:text-black hover:border-black ">Add Coffee <FiCoffee /> </button>
-                </Link>
+            {/* main card design  */}
+            <div className="mainBg">
+                <div className="text-center mt-5 rancho-font space-y-4">
+                    <p className="">--- Sip & Savor ---</p>
+                    <h2 className="text-4xl text-[#331A15] font-semibold">Our Popular Products</h2>
+                    <Link to='/addcoffee'>
+                        <button className="btn  bg-[#E3B577] text-black rancho-font hover:border-2 hover:bg-transparent hover:text-black hover:border-black ">Add Coffee <FiCoffee /> </button>
+                    </Link>
+                </div>
+                {/* card design  */}
+                <div className="">
+
+                </div>
+            </div>
+
+
+            {/* follow section  */}
+            <div className="mt-32 lg:px-40 md:px-20 px-10 text-center">
+                <div className="text-center">
+                    <p className="text-base raleway-font">Follow Us Now</p>
+                    <h2 className="text-4xl rancho-font text-[#331A15] font-semibold">Follow on Instagram</h2>
+                </div>
+                <div className="mt-8 grid items-center justify-center lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 px-5">
+                    <img src={img01} alt="" className="" />
+                    <img src={img02} alt="" className="" />
+                    <img src={img03} alt="" className="" />
+                    <img src={img04} alt="" className="" />
+                    <img src={img05} alt="" className="" />
+                    <img src={img06} alt="" className="" />
+                    <img src={img07} alt="" className="" />
+                    <img src={img08} alt="" className="" />
+                </div>
             </div>
         </div>
     );
