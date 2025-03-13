@@ -12,4 +12,5 @@
 
 .mainBg {
     background-image: url('../src/assets/more/1.png');
+    background-repeat: no-repeat;
 }
