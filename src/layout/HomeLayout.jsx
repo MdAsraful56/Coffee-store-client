@@ -1,7 +1,7 @@
 import React from 'react';
 import headerIcon from '../assets/more/3.png'
 import { FiCoffee } from "react-icons/fi";
-import { Link } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import img01 from '../assets/cups/Rectangle 10.png';
 import img02 from '../assets/cups/Rectangle 11.png';
 import img03 from '../assets/cups/Rectangle 12.png';
@@ -14,7 +14,7 @@ import img08 from '../assets/cups/Rectangle 9.png';
 
 const HomeLayout = () => {
 
-    
+    const coffees = useLoaderData();
 
     return (
         <div className='mb-10'>
@@ -42,7 +42,7 @@ const HomeLayout = () => {
                 </div>
                 {/* card design  */}
                 <div className="">
-
+                        <h2 className="text-5xl">coffee{coffees.length}</h2>
                 </div>
             </div>
 

@@ -11,7 +11,14 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={ <Main/> } >
-        <Route index element={ <HomeLayout/> } />
+        <Route index element={ <HomeLayout/> } 
+            loader={async () => {
+            const response = await fetch('http://localhost:5000/coffee');
+            if (!response.ok) {
+              throw new Error('Failed to fetch coffees');
+            }
+            return response.json(); // Ensure JSON is returned
+          }} />
         <Route path='*' element={ <Error/> } />
         <Route path='addcoffee' element={ <AddCoffees/> } />
         <Route path='updatecoffee' element={ <UpdateCoffee/> } />
