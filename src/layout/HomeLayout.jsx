@@ -10,6 +10,7 @@ import img05 from '../assets/cups/Rectangle 14.png';
 import img06 from '../assets/cups/Rectangle 15.png';
 import img07 from '../assets/cups/Rectangle 16.png';
 import img08 from '../assets/cups/Rectangle 9.png';
+import CoffeeCard from '../components/CoffeeCard';
 
 
 const HomeLayout = () => {
@@ -42,7 +43,9 @@ const HomeLayout = () => {
                 </div>
                 {/* card design  */}
                 <div className="">
-                        <h2 className="text-5xl">coffee{coffees.length}</h2>
+                    {
+                        coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee} />)
+                    }
                 </div>
             </div>
 
