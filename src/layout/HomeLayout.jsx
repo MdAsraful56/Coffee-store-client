@@ -47,6 +47,7 @@ const HomeLayout = () => {
                     features.map((featuer, index) => <Feature key={index} featuer={featuer} /> )
                 }
             </div>
+            
             {/* main card design  */}
             <div className="mainBg">
                 <div className="text-center mt-5 rancho-font space-y-4">

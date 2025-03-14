@@ -21,7 +21,7 @@ function App() {
           }} />
         <Route path='*' element={ <Error/> } />
         <Route path='addcoffee' element={ <AddCoffees/> } />
-        <Route path='updatecoffee' element={ <UpdateCoffee/> } />
+        <Route path='updatecoffee/:id' element={ <UpdateCoffee/> } loader={({params}) => {fetch(`http://localhost:5000/updatecoffee/${params.id}`)}} />
       </Route>
     )
   )
