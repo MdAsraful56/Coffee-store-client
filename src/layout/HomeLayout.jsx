@@ -42,7 +42,7 @@ const HomeLayout = () => {
                 </div>
             </div>
             {/* small card  */}
-            <div className="bg-[#ECEAE3] w-full h-72">
+            <div className="bg-[#ECEAE3] w-full  grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 lg:px-40 md:px-20 px-10 text-left">
                 {
                     features.map((featuer, index) => <Feature key={index} featuer={featuer} /> )
                 }
