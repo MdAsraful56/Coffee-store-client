@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import headerIcon from '../assets/more/3.png'
 import { FiCoffee } from "react-icons/fi";
 import { Link, useLoaderData } from 'react-router';
@@ -11,11 +11,24 @@ import img06 from '../assets/cups/Rectangle 15.png';
 import img07 from '../assets/cups/Rectangle 16.png';
 import img08 from '../assets/cups/Rectangle 9.png';
 import CoffeeCard from '../components/CoffeeCard';
+import Feature from '../components/Feature';
 
 
 const HomeLayout = () => {
 
     const coffees = useLoaderData();
+
+    const [features, setFeatures] = useState([]);
+
+
+    useEffect( () => {
+        fetch('../../public/feature.json')
+            .then(res => res.json())
+            .then(data => {
+                setFeatures(data)
+            })
+    } ,[])
+
 
     return (
         <div className='mb-10'>
@@ -30,7 +43,9 @@ const HomeLayout = () => {
             </div>
             {/* small card  */}
             <div className="bg-[#ECEAE3] w-full h-72">
-
+                {
+                    features.map((featuer, index) => <Feature key={index} featuer={featuer} /> )
+                }
             </div>
             {/* main card design  */}
             <div className="mainBg">
