@@ -2,9 +2,11 @@ import React from 'react';
 import { MdDelete } from "react-icons/md";
 import { IoEye } from "react-icons/io5";
 import { MdModeEdit } from "react-icons/md";
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 // import { Link } from "react-router-dom";
 import Swal from 'sweetalert2';
+
+
 
 const CoffeeCard = ({coffee}) => {
     // console.log(coffee);
@@ -53,7 +55,9 @@ const CoffeeCard = ({coffee}) => {
                     <h4 className="text-lg"> <span className="font-semibold">Taste: </span> {taste}</h4>
                 </div>
                 <div className="w-1/5 flex flex-col pr-2 space-y-2">
-                    <button className="btn bg-[#D2B48C] "> <IoEye color='white' size={25}/> </button>
+                    <Link to='coffee/edit'>
+                        <button className="btn bg-[#D2B48C] "> <IoEye color='white' size={25}/> </button>
+                    </Link>
                     <Link to={`/updatecoffee/${_id}`} >
                         <button className="btn bg-[#3C393B] "> <MdModeEdit color='white' size={25}/> </button>
                     </Link>
