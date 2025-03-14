@@ -57,7 +57,7 @@ const HomeLayout = () => {
                     </Link>
                 </div>
                 {/* card design  */}
-                <div className="">
+                <div className="lg:px-40 md:px-20 px-10 grid lg:grid-cols-2 grid-cols-1 gap-7 mt-10">
                     {
                         coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee} />)
                     }
