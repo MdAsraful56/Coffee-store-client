@@ -55,7 +55,7 @@ const CoffeeCard = ({coffee}) => {
                     <h4 className="text-lg"> <span className="font-semibold">Taste: </span> {taste}</h4>
                 </div>
                 <div className="w-1/5 flex flex-col pr-2 space-y-2">
-                    <Link to='coffee/edit'>
+                    <Link to='edit'>
                         <button className="btn bg-[#D2B48C] "> <IoEye color='white' size={25}/> </button>
                     </Link>
                     <Link to={`/updatecoffee/${_id}`} >

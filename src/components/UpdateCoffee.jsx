@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router';
+import { FaArrowLeft } from "react-icons/fa";
+import Swal from 'sweetalert2'
 
 const UpdateCoffee = () => {
     return (
@@ -7,9 +10,9 @@ const UpdateCoffee = () => {
                 
                 <div className=" mt-10 lg:px-52 md:px-24 px-5 space-y-3">
                     <Link to='/'>
-                        <h4 className="text-2xl py-4 rancho-font gap-2 flex flex-row items-center"> <span><FaArrowLeft /></span> Back to home</h4>
+                        <button className="text-2xl p-2 rounded-xl py-4 rancho-font gap-2 flex flex-row items-center hover:border-2 hover:bg-[#E3B577] hover:text-white hover:border-white "> <span><FaArrowLeft /></span> Back to home</button>
                     </Link>
-                    <div className="text-center raleway-font bg-[#F4F3F0] py-5 rounded-xl">
+                    <div className="text-center raleway-font bg-[#F4F3F0] py-5 rounded-xl mt-4 space-y-3">
                         <h1 className="text-4xl rancho-font">Update Existing Coffee Details</h1>
                         <p className="lg:px-40 md:px-10 px-5">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distraceted by the readable.</p>
                         <div className="lg:px-20 md:px-10 px-4 py-5">

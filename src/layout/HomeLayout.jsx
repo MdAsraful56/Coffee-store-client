@@ -65,6 +65,9 @@ const HomeLayout = () => {
                 </div>
             </div>
 
+                    {/* <h1 className="text-8xl">
+                        <Link to='/fuck'>Fuck</Link>
+                    </h1> */}
 
             {/* follow section  */}
             <div className="mt-32 lg:px-40 md:px-20 px-10 text-center">
