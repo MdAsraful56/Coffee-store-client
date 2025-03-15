@@ -5,6 +5,7 @@ import Main from './components/Main'
 import AddCoffees from './components/AddCoffees'
 import UpdateCoffee from './components/UpdateCoffee'
 import Error from './components/Error'
+import Details from './components/Details'
 // import Fuck from './components/Fuck'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='*' element={ <Error/> } />
         <Route path='addcoffee' element={ <AddCoffees/> } />
         <Route path='updatecoffee/:id' element={ <UpdateCoffee/> } loader={async({params}) => {return fetch(`http://localhost:5000/updatecoffee/${params.id}`)}} />
+        <Route path='details/:id' element={ <Details/> } loader={ async({params}) => {return fetch(`http://localhost:5000/details/${params.id}`)}} />
       </Route>
     )
   )

@@ -36,6 +36,8 @@ const CoffeeCard = ({coffee}) => {
                             text: "Your file has been deleted.",
                             icon: "success"
                         });
+                        // const remaining = coffees.filter(cof => cof.id !== _id)
+                        // setCoffees(remaining);
                     })
             }
         });
@@ -55,7 +57,7 @@ const CoffeeCard = ({coffee}) => {
                     <h4 className="text-lg"> <span className="font-semibold">Taste: </span> {taste}</h4>
                 </div>
                 <div className="w-1/5 flex flex-col pr-2 space-y-2">
-                    <Link to='edit'>
+                    <Link to={`/details/${_id}`}>
                         <button className="btn bg-[#D2B48C] "> <IoEye color='white' size={25}/> </button>
                     </Link>
                     <Link to={`/updatecoffee/${_id}`} >

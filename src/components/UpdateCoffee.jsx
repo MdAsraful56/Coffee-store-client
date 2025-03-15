@@ -7,8 +7,8 @@ const UpdateCoffee = () => {
 
 
     const coffee = useLoaderData();
-    
 
+    
     const {_id, name, chef, supplier, taste, category, details, photo} = coffee
 
     const handleUpdateCoffee = e => {
@@ -68,37 +68,37 @@ const UpdateCoffee = () => {
                                 <div className="text-left flex md:flex-row flex-col gap-5">
                                     <fieldset className="fieldset md:w-1/2 w-full items-center">
                                         <legend className="fieldset-legend text-lg">Name</legend>
-                                        <input type="text" className="input input-info input-lg w-full" placeholder="Enter coffee Name" defaultValue={name} />
+                                        <input type="text" name='name' className="input input-info input-lg w-full" placeholder="Enter coffee Name" defaultValue={name} />
                                     </fieldset>
                                     <fieldset className=" md:w-1/2 w-full items-center">
                                         <legend className="fieldset-legend text-lg">Chef</legend>
-                                        <input type="text" className="input input-info input-lg w-full" placeholder="Enter coffee Chef" defaultValue={chef} />
+                                        <input type="text" name='chef' className="input input-info input-lg w-full" placeholder="Enter coffee Chef" defaultValue={chef} />
                                     </fieldset>
                                 </div>
                                 <div className="text-left flex md:flex-row flex-col gap-5">
                                     <fieldset className="fieldset md:w-1/2 w-full items-center">
                                         <legend className="fieldset-legend text-lg">Supplier</legend>
-                                        <input type="text" className="input input-info input-lg w-full" placeholder="Enter coffee Supplier" defaultValue={supplier} />
+                                        <input type="text" name='supplier' className="input input-info input-lg w-full" placeholder="Enter coffee Supplier" defaultValue={supplier} />
                                     </fieldset>
                                     <fieldset className=" md:w-1/2 w-full items-center">
                                         <legend className="fieldset-legend text-lg">Taste</legend>
-                                        <input type="text" className="input input-info input-lg w-full" placeholder="Enter coffee Taste" defaultValue={taste} />
+                                        <input type="text" name='taste' className="input input-info input-lg w-full" placeholder="Enter coffee Taste" defaultValue={taste} />
                                     </fieldset>
                                 </div>
                                 <div className="text-left flex md:flex-row flex-col gap-5">
                                     <fieldset className="fieldset md:w-1/2 w-full items-center">
                                         <legend className="fieldset-legend text-lg">Category</legend>
-                                        <input type="text" className="input input-info input-lg w-full" placeholder="Enter coffee Category" defaultValue={category} />
+                                        <input type="text" name='category' className="input input-info input-lg w-full" placeholder="Enter coffee Category" defaultValue={category} />
                                     </fieldset>
                                     <fieldset className=" md:w-1/2 w-full items-center">
                                         <legend className="fieldset-legend text-lg">Details</legend>
-                                        <input type="text" className="input input-info input-lg w-full" placeholder="Enter coffee Details" defaultValue={details} />
+                                        <input type="text" name='details' className="input input-info input-lg w-full" placeholder="Enter coffee Details" defaultValue={details} />
                                     </fieldset>
                                 </div>
                                 <div className="text-left">
                                     <fieldset className="fieldset w-full items-center">
                                         <legend className="fieldset-legend text-lg">Photo</legend>
-                                        <input type="text" className="input input-info input-lg w-full" placeholder="Enter coffee photo url" defaultValue={photo} />
+                                        <input type="text" name='photo' className="input input-info input-lg w-full" placeholder="Enter coffee photo url" defaultValue={photo} />
                                     </fieldset>
                                 </div>
                                 <div className="mt-6">
