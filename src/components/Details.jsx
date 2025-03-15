@@ -7,17 +7,17 @@ const Details = () => {
     const {_id, name, chef, supplier, taste, details, photo} = coffee
 
     return (
-        <div className='lg:px-40 md:px-20 px-10 mt-20'>
-            <div className="items-center flex flex-row gap-5">
+        <div className='lg:px-40 md:px-20 px-10 mt-20 mb-20 items-center justify-center '>
+            <div className="items-center flex md:flex-row flex-col gap-7 bg-amber-50 lg:p-10 p-2 rounded-2xl border-2 ">
                 <div className="w-1/3">
-                    <img src={photo} className='' alt="" />
+                    <img src={photo} className='w-full h-full' alt="" />
                 </div>
                 <div className="w-2/3">
-                    <h4 className="">{name}</h4>
-                    <h4 className="">{chef}</h4>
-                    <h4 className="">{supplier}</h4>
-                    <h4 className="">{taste}</h4>
-                    <h4 className="">{details}</h4>
+                    <h4 className="md:text-2xl text-xl rancho-font font-medium"> <span className="font-semibold">Name:</span> {name}</h4>
+                    <h4 className="md:text-2xl text-xl rancho-font font-medium"> <span className="font-semibold">Chef:</span> {chef}</h4>
+                    <h4 className="md:text-2xl text-xl rancho-font font-medium"> <span className="font-semibold">Supplier:</span> {supplier}</h4>
+                    <h4 className="md:text-2xl text-xl rancho-font font-medium"> <span className="font-semibold">Taste:</span> {taste}</h4>
+                    <h4 className="md:text-2xl text-xl rancho-font font-medium"> <span className="font-semibold">Details:</span> {details}</h4>
                 </div>
             </div>
         </div>
