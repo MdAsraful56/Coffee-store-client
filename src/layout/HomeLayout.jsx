@@ -16,7 +16,8 @@ import Feature from '../components/Feature';
 
 const HomeLayout = () => {
 
-    const coffees = useLoaderData();
+    const loadedCoffees = useLoaderData();
+    const [coffees, setCoffees] = useState(loadedCoffees);
 
     const [features, setFeatures] = useState([]);
 
@@ -58,9 +59,9 @@ const HomeLayout = () => {
                     </Link>
                 </div>
                 {/* card design  */}
-                <div className="lg:px-40 md:px-20 px-10 grid lg:grid-cols-2 grid-cols-1 gap-7 mt-10">
+                <div className="lg:px-40 md:px-20 px-5 grid lg:grid-cols-2 grid-cols-1 gap-4 mt-10">
                     {
-                        coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee} />)
+                        coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee} coffees={coffees} setCoffees={setCoffees} />)
                     }
                 </div>
             </div>
