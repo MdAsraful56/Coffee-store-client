@@ -12,6 +12,7 @@ import img07 from '../assets/cups/Rectangle 16.png';
 import img08 from '../assets/cups/Rectangle 9.png';
 import CoffeeCard from '../components/CoffeeCard';
 import Feature from '../components/Feature';
+import Navbar from '../components/Navbar';
 
 
 const HomeLayout = () => {
@@ -33,6 +34,7 @@ const HomeLayout = () => {
 
     return (
         <div className='mb-10'>
+            <Navbar/>
             {/* header section  */}
             <div className="relative w-full">
                 <img src={headerIcon} alt="" className="w-full md:h-[550px] h-80 object-fill" />
