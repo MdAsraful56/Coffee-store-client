@@ -8,6 +8,7 @@ import Error from './components/Error'
 import Details from './components/Details'
 import Registration from './components/Registration'
 import Login from './components/Login'
+import AuthProvider from './providers/AuthProvider'
 // import Fuck from './components/Fuck'
 
 function App() {
@@ -34,9 +35,9 @@ function App() {
   )
 
   return (
-    <>
+    <AuthProvider>
       <RouterProvider router={router} />
-    </>
+    </AuthProvider>
   )
 }
 
