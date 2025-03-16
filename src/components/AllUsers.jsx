@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const AllUsers = () => {
     const loadedUsers = useLoaderData();
-    const [users, setUsers] = useState(loadedUsers);
+    const [users] = useState(loadedUsers);
 
     // const handleUserDelete = id => {
     //     // console.log(id);
@@ -48,7 +48,7 @@ const AllUsers = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>creationTime</th>
-                        <th></th>
+                        <th>lastSignInTime</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -60,7 +60,7 @@ const AllUsers = () => {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>{user.creationTime}</td>
-                            <td>{user.creationTime}</td>
+                            <td>{user.lastSignInTime}</td>
                             {/* <td>
                                 <button className="btn">x</button>
                                 <button onClick={()=>handleUserDelete(user._id)} className="btn bg-red-600"><MdDelete size={25} color='white' /></button>

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -19,7 +20,7 @@ const Login = () => {
                 const loginInfo = { email, lastSignInTime };
 
                 fetch(`http://localhost:5000/users`, {
-                    method: 'patch',
+                    method: 'PATCH',
                     headers: {
                         'content-type': 'application/json'
                     },
@@ -27,7 +28,14 @@ const Login = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        console.log(data);
+                        if(data.modifiedCount) {
+                            Swal.fire({
+                                title: "Login !",
+                                icon: "success",
+                                draggable: true
+                            });
+                        }
                     })
             })
             .catch(error => {
