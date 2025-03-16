@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
+import { MdDelete } from "react-icons/md";
 
 const AllUsers = () => {
     const loadedUsers = useLoaderData();
     const [users, setUsers] = useState(loadedUsers);
+
+    const handleUserDelete = id => {
+
+    }
 
     return (
         <div>
@@ -17,6 +22,7 @@ const AllUsers = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>creationTime</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -28,6 +34,10 @@ const AllUsers = () => {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>{user.creationTime}</td>
+                            <td>
+                                <button className="btn">x</button>
+                                <button onClick={()=>handleUserDelete()} className="btn bg-red-600"><MdDelete size={20} color='white' /></button>
+                            </td>
                         </tr>)
                     }
 
