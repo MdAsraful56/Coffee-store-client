@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const NavbarMain = () => {
 
@@ -35,7 +35,7 @@ const NavbarMain = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link to='/alluser'><a className="btn text-xl font-semibold rancho-font">All User</a></Link>
                 </div>
             </div>
         </div>

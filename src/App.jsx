@@ -9,6 +9,7 @@ import Details from './components/Details'
 import Registration from './components/Registration'
 import Login from './components/Login'
 import AuthProvider from './providers/AuthProvider'
+import AllUsers from './components/AllUsers'
 // import Fuck from './components/Fuck'
 
 function App() {
@@ -30,6 +31,13 @@ function App() {
         <Route path='details/:id' element={ <Details/> } loader={ async({params}) => {return fetch(`http://localhost:5000/details/${params.id}`)}} />
         <Route path='registration' element={ <Registration/> } />
         <Route path='login' element={ <Login/> } />
+        <Route path='alluser' element={ <AllUsers/> }  loader={async () => {
+            const response = await fetch('http://localhost:5000/users');
+            if (!response.ok) {
+              throw new Error('Failed to fetch coffees');
+            }
+            return response.json(); // Ensure JSON is returned
+          }} />
       </Route>
     )
   )
