@@ -1,14 +1,40 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { MdDelete } from "react-icons/md";
+import Swal from 'sweetalert2';
 
 const AllUsers = () => {
     const loadedUsers = useLoaderData();
     const [users, setUsers] = useState(loadedUsers);
 
-    const handleUserDelete = id => {
+    // const handleUserDelete = id => {
+    //     // console.log(id);
+    //     Swal.fire({
+    //         title: "Are you sure?",
+    //         text: "You won't be able to revert this!",
+    //         icon: "warning",
+    //         showCancelButton: true,
+    //         confirmButtonColor: "#3085d6",
+    //         cancelButtonColor: "#d33",
+    //         confirmButtonText: "Yes, delete it!"
+    //         }).then((result) => {
+    //         if (result.isConfirmed) {
+    //             // Swal.fire({
+    //             // title: "Deleted!",
+    //             // text: "Your file has been deleted.",
+    //             // icon: "success"
+    //             // });
 
-    }
+    //             // delete form database 
+    //             fetch(`http://localhost:5000/users/${id}`, {
+    //                 method: 'delete'
+    //             })
+    //                 .then(res => res.json())
+    //                 .then(data => {
+    //                     console.log(data);
+    //                 })
+    //         }});
+    // }
 
     return (
         <div>
@@ -22,7 +48,7 @@ const AllUsers = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>creationTime</th>
-                        <th>Action</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -34,10 +60,11 @@ const AllUsers = () => {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>{user.creationTime}</td>
-                            <td>
+                            <td>{user.creationTime}</td>
+                            {/* <td>
                                 <button className="btn">x</button>
-                                <button onClick={()=>handleUserDelete()} className="btn bg-red-600"><MdDelete size={20} color='white' /></button>
-                            </td>
+                                <button onClick={()=>handleUserDelete(user._id)} className="btn bg-red-600"><MdDelete size={25} color='white' /></button>
+                            </td> */}
                         </tr>)
                     }
 
